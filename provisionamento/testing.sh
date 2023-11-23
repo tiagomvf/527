@@ -111,4 +111,5 @@ sudo dnf upgrade -y jenkins
 validateCommand "Atualiza Jenkins"
 
 sudo systemctl restart jenkins
+sudo systemctl enable jenkins
 validateCommand "Reinicia Jenkins"
