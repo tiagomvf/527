@@ -113,3 +113,12 @@ validateCommand "Atualiza Jenkins"
 sudo systemctl restart jenkins
 sudo systemctl enable jenkins
 validateCommand "Reinicia Jenkins"
+
+mkdir -p /var/lib/jenkins/.ssh
+cat > /var/lib/jenkins/.ssh/config <<EOF
+Host *
+  StrictHostKeyChecking no
+
+EOF
+validateCommand "Desabilita SSH StrictHostKeyChecking"
+
